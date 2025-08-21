@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec Pro | Expert en Audit de Sécurité & Pentest</title>
+    <meta name="description" content="Expert en sécurité offensive et pentest. J'effectue des audits de sécurité complets pour sites web, API et infrastructures. Protégez vos actifs numériques avant les pirates.">
+    <meta name="keywords" content="sécurité offensive, pentest, audit de sécurité, cybersécurité, hacker éthique, sécurité web, test d'intrusion, récupération de compte, protection des données">
+    <link rel="canonical" href="https://keyll0ger.github.io/CyberSec/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "CyberSec Pro",
+          "url": "https://keyll0ger.github.io/CyberSec/",
+          "logo": "https://keyll0ger.github.io/CyberSec/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telegram": "https://t.me/CyberSecPro18",
+            "contactType": "customer service"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "name": "CyberSec Pro",
+          "url": "https://keyll0ger.github.io/CyberSec/",
+          "description": "Expert en sécurité offensive et pentest. J'effectue des audits de sécurité complets pour sites web, API et infrastructures.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "CyberSec Pro"
+          }
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Audit de Sécurité",
+          "provider": {
+            "@type": "Organization",
+            "name": "CyberSec Pro"
+          },
+          "name": "Audit de Sécurité",
+          "description": "Test d'intrusion (pentest) complet sur tes sites, APIs ou infrastructures. Détection de vulnérabilités (SQLi, XSS, RCE) et rapport détaillé avec correctifs.",
+          "offers": {
+            "@type": "Offer",
+            "price": "150",
+            "priceCurrency": "EUR"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Est-ce légal ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, tous mes services sont 100% légaux et réalisés avec l'accord du propriétaire du périmètre audité."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels sont les moyens de paiement ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "J'accepte uniquement les cryptomonnaies pour des raisons de confidentialité et de sécurité : Monero (XMR), Bitcoin (BTC), Ethereum (ETH). Pour les projets >1000€, un contrat d'escrow peut être mis en place."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien de temps pour un audit ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cela dépend de la complexité du projet : Site simple (WordPress) : 24h. API/Infrastructure complexe : 3–5 jours. Urgence : Possible sous 12h (+20% de frais)."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Overlay de chargement -->
+    <div class="loader-overlay">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Header avec toggle thème -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-shield-halved"></i>
+                <div class="logo-text">CyberSec<span>Pro</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">Fonctionnement</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section avec effet typing -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Sécurisez vos actifs numériques <span class="typing-text"></span></h1>
+                <p>Expert en <strong>sécurité offensive</strong>, je protège vos données avant que les pirates ne le fassent.</p>
+                <a href="#contact" class="btn">Me contacter</a>
+                <a href="#" class="btn btn-secondary" id="open-estimator-btn">Obtenir une estimation</a>
+                <div class="scroll-down">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2><i class="fas fa-laptop-code"></i> Des services sur-mesure</h2>
+                <p class="section-subtitle">Chaque menace est unique. Chaque solution doit l'être aussi. Voici comment je peux vous aider à sécuriser vos projets.</p>
+                
+                <div class="services-wrapper">
+                    <!-- Service Item 1: Audit de Sécurité -->
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Audit de Sécurité Complet</h3>
+                            <p>Analyse approfondie de vos sites, API ou infrastructures pour détecter les vulnérabilités (SQLi, XSS, RCE, etc.) avant qu'elles ne soient exploitées. Vous recevez un rapport détaillé avec les preuves et les correctifs à appliquer.</p>
+                            <ul>
+                                <li>Scan automatisé et vérification manuelle</li>
+                                <li>Rapport PDF professionnel avec preuves (PoC)</li>
+                                <li>Support post-audit d'un mois inclus</li>
+                            </ul>
+                            <div class="service-footer">
+                                <span class="price">À partir de <strong>150€</strong></span>
+                                <button class="btn" onclick="contactService('Audit de Sécurité')">Demander un devis</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Item 2: Sécurisation Express -->
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Sécurisation Express 24h</h3>
+                            <p>Une faille critique a été découverte sur votre site ? J'interviens en moins de 24h pour patcher les vulnérabilités sur les CMS populaires (WordPress, Magento, etc.) et configurer les protections essentielles.</p>
+                            <ul>
+                                <li>Patch des vulnérabilités critiques</li>
+                                <li>Mise à jour sécurisée des dépendances</li>
+                                <li>Configuration de firewall applicatif (WAF)</li>
+                            </ul>
+                            <div class="service-footer">
+                                <span class="price">À partir de <strong>200€</strong></span>
+                                <button class="btn" onclick="contactService('Sécurisation Express')">Intervention d'urgence</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Item 3: Récupération de Comptes -->
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Récupération de Comptes</h3>
+                            <p>Service de récupération de comptes (Instagram, Facebook, emails) par des moyens légaux, en exploitant des failles de réinitialisation de mot de passe ou via une ingénierie sociale éthique et consentie.</p>
+                            <ul>
+                                <li>Méthodes 100% légales et sans phishing</li>
+                                <li>Preuve de propriété du compte exigée</li>
+                                <li>Confidentialité et discrétion garanties</li>
+                            </ul>
+                            <div class="service-footer">
+                                <span class="price">À partir de <strong>100€</strong></span>
+                                <button class="btn" onclick="contactService('Récupération de Comptes')">Tenter une récupération</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section "Comment ça marche" -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2><i class="fas fa-question-circle"></i> Comment ça marche ?</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h3>1. Contact</h3>
+                        <p>Vous me décrivez votre besoin via Telegram ou email (chiffré PGP). Réponse sous <strong>2h</strong>.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3>2. Devis</h3>
+                        <p>Je vous propose une solution claire avec un <strong>prix fixe</strong>. Pas de frais cachés.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3>3. Paiement</h3>
+                        <p>Paiement sécurisé en <strong>Monero (XMR)</strong> ou Bitcoin (BTC). Escrow disponible pour les gros projets.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>4. Livraison</h3>
+                        <p>Résultats sous <strong>24–48h</strong> avec preuves (vidéo, logs, rapport PDF).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Interactive -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2><i class="fas fa-question"></i> Questions Fréquentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3><i class="fas fa-plus"></i> Est-ce légal ?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, tous mes services sont <strong>100% légaux</strong> et réalisés avec <strong>l'accord du propriétaire</strong> du périmètre audité.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3><i class="fas fa-plus"></i> Quels sont les moyens de paiement ?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>J'accepte uniquement les cryptomonnaies pour des raisons de <strong>confidentialité et de sécurité</strong> :</p>
+                            <ul>
+                                <li><strong>Monero (XMR)</strong> (recommandé, 100% anonyme)</li>
+                                <li>Bitcoin (BTC)</li>
+                                <li>Ethereum (ETH)</li>
+                            </ul>
+                            <p>Pour les projets >1000€, un <strong>contrat d'escrow</strong> peut être mis en place.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3><i class="fas fa-plus"></i> Combien de temps pour un audit ?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Cela dépend de la complexité du projet :</p>
+                            <ul>
+                                <li><strong>Site simple (WordPress)</strong> : 24h</li>
+                                <li><strong>API/Infrastructure complexe</strong> : 3–5 jours</li>
+                                <li><strong>Urgence</strong> : Possible sous 12h (+20% de frais)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3><i class="fas fa-plus"></i> Garanties ?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Je garantis :</p>
+                            <ul>
+                                <li><strong>Confidentialité totale</strong> (pas de logs, pas de fuite)</li>
+                                <li><strong>Résultats concrets</strong> (preuves techniques)</li>
+                                <li><strong>Support post-service</strong> (1 mois inclus)</li>
+                            </ul>
+                            <p>Si je ne parviens pas à résoudre votre problème, un remboursement est possible selon les conditions établies dans le devis.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <h3><i class="fas fa-plus"></i> Anonymat garanti ?</h3>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui. Je n'ai <strong>aucune obligation de conservation de données</strong> et j'utilise :</p>
+                            <ul>
+                                <li>Serveurs <strong>offshore</strong> (Bulgarie, Russie)</li>
+                                <li>Communication chiffrée (PGP, Session)</li>
+                                <li>Paiements en <strong>Monero (XMR)</strong></li>
+                            </ul>
+                            <p>Vous pouvez me contacter via <strong>Telegram chiffré</strong> ou <strong>email PGP</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2><i class="fas fa-paper-plane"></i> Entrons en contact</h2>
+                <p class="section-subtitle">Une question, un projet ? Je suis disponible 24/7 pour les urgences. Réponse garantie sous 2 heures.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Contact Direct</h3>
+                        <p>Pour une réponse plus rapide, utilisez l'une des méthodes ci-dessous. Toutes les communications sont confidentielles.</p>
+                        
+                        <div class="method">
+                            <div class="method-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Telegram</h4>
+                                <p><a href="https://t.me/CyberSecPro18" target="_blank">@CyberSecPro18</a> (Chiffré E2E)</p>
+                            </div>
+                        </div>
+
+                        <div class="method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email Sécurisé</h4>
+                                <p>cybersecpro18@proton.me (Clé PGP)</p>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Envoyer un message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="service">Service souhaité</label>
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected>Choisissez un service...</option>
+                                    <option value="Audit de Sécurité">Audit de Sécurité</option>
+                                    <option value="Sécurisation Express">Sécurisation Express</option>
+                                    <option value="Récupération de Comptes">Récupération de Comptes</option>
+                                    <option value="Anonymat & Protection">Anonymat & Protection</option>
+                                    
+                                    <option value="Hébergement Offshore">Hébergement Offshore</option>
+                                    <option value="Autre">Autre (précisez dans le message)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Votre message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Envoyer <i class="fas fa-paper-plane"></i></button>
+                            <div id="form-message" style="margin-top: 15px; transition: all 0.3s ease;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-halved"></i>
+                        <div class="logo-text">CyberSec<span>Pro</span></div>
+                    </div>
+                    <p>Votre partenaire de confiance en sécurité offensive. Nous identifions les failles avant qu'elles ne deviennent des menaces.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#how-it-works">Fonctionnement</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contactez-moi</h4>
+                    <ul>
+                        <li><i class="fab fa-telegram"></i> <a href="https://t.me/CyberSecPro18" target="_blank">Telegram</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:cybersecpro18@proton.me">Email Sécurisé</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez-moi</h4>
+                    <a href="https://github.com/keyll0ger" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <!-- Ajoutez d'autres réseaux si nécessaire -->
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 CyberSecPro | Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Estimator Modal -->
+    <div class="estimator-modal" id="estimator-modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-estimator-btn">&times;</button>
+            <h3>Estimateur de Devis</h3>
+            <div class="progress-bar">
+                <div class="progress-step active" data-step="1">Service</div>
+                <div class="progress-step" data-step="2">Détails</div>
+                <div class="progress-step" data-step="3">Estimation</div>
+                <div class="progress-step" data-step="4">Contact</div>
+            </div>
+
+            <form id="estimator-form">
+                <!-- Step 1: Select Service -->
+                <div class="form-step active" id="step-1">
+                    <h4>Quel service vous intéresse ?</h4>
+                    <div class="radio-group">
+                        <label><input type="radio" name="service_type" value="audit" checked> Audit de Sécurité</label>
+                        <label><input type="radio" name="service_type" value="securisation"> Sécurisation Express</label>
+                        <label><input type="radio" name="service_type" value="recuperation"> Récupération de Compte</label>
+                    </div>
+                    <button type="button" class="btn next-btn">Suivant</button>
+                </div>
+
+                <!-- Step 2: Service Details -->
+                <div class="form-step" id="step-2">
+                    <!-- Questions for Audit -->
+                    <div class="service-questions" data-service="audit">
+                        <h4>Détails de l'audit</h4>
+                        <p>Quel type d'actif souhaitez-vous auditer ?</p>
+                        <div class="card-select-group">
+                            <label><input type="radio" name="audit_asset_type" value="website" checked><span><i class="fas fa-desktop"></i> Site Web</span></label>
+                            <label><input type="radio" name="audit_asset_type" value="api"><span><i class="fas fa-cogs"></i> API</span></label>
+                            <label><input type="radio" name="audit_asset_type" value="mobile"><span><i class="fas fa-mobile-alt"></i> App Mobile</span></label>
+                        </div>
+                        <p>Quelle est sa complexité ?</p>
+                        <div class="card-select-group">
+                            <label><input type="radio" name="audit_complexity" value="low" checked><span><i class="fas fa-signal-1"></i> Faible</span></label>
+                            <label><input type="radio" name="audit_complexity" value="medium"><span><i class="fas fa-signal-2"></i> Moyenne</span></label>
+                            <label><input type="radio" name="audit_complexity" value="high"><span><i class="fas fa-signal-3"></i> Élevée</span></label>
+                        </div>
+                    </div>
+                    <!-- Questions for Securisation -->
+                    <div class="service-questions" data-service="securisation" style="display: none;">
+                        <h4>Détails de la sécurisation</h4>
+                        <p>Quelle est la technologie principale ?</p>
+                        <div class="card-select-group">
+                            <label><input type="radio" name="securisation_tech" value="wordpress" checked><span><i class="fab fa-wordpress"></i> WordPress</span></label>
+                            <label><input type="radio" name="securisation_tech" value="prestashop"><span><i class="fas fa-shopping-cart"></i> Presta/Magento</span></label>
+                            <label><input type="radio" name="securisation_tech" value="custom"><span><i class="fas fa-code"></i> Custom</span></label>
+                        </div>
+                    </div>
+                    <!-- Questions for Récupération -->
+                    <div class="service-questions" data-service="recuperation" style="display: none;">
+                        <h4>Détails de la récupération</h4>
+                        <p>Quel est le type de compte ?</p>
+                        <div class="card-select-group">
+                            <label><input type="radio" name="recuperation_account" value="social" checked><span><i class="fas fa-users"></i> Réseau Social</span></label>
+                            <label><input type="radio" name="recuperation_account" value="email"><span><i class="fas fa-envelope"></i> Email</span></label>
+                            <label><input type="radio" name="recuperation_account" value="autre"><span><i class="fas fa-question-circle"></i> Autre</span></label>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn prev-btn">Précédent</button>
+                        <button type="button" class="btn next-btn">Estimer le prix</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Estimation -->
+                <div class="form-step" id="step-3">
+                    <h4>Estimation du coût</h4>
+                    <div class="estimation-result">
+                        <p>Basé sur vos sélections, le coût estimé pour ce service est :</p>
+                        <div class="price-range" id="price-range">€€€ - €€€€</div>
+                        <small>Cette estimation est une fourchette de prix. Un devis final et précis vous sera envoyé après analyse de votre demande.</small>
+                    </div>
+                    <button type="button" class="btn prev-btn">Précédent</button>
+                    <button type="button" class="btn next-btn">Finaliser la demande</button>
+                </div>
+
+                <!-- Step 4: Contact Details -->
+                <div class="form-step" id="step-4">
+                    <h4>Finalisez votre demande</h4>
+                    <p>Laissez-moi vos informations de contact pour recevoir votre devis détaillé.</p>
+                    <input type="text" name="contact_info" placeholder="Votre email ou pseudo Telegram" required>
+                    <textarea name="contact_message" rows="3" placeholder="Ajoutez des détails supplémentaires sur votre projet si nécessaire..."></textarea>
+                    <div class="button-group">
+                        <button type="button" class="btn prev-btn">Précédent</button>
+                        <button type="submit" class="btn" data-send-method="email">Envoyer par Email</button>
+                        <button type="submit" class="btn btn-secondary" data-send-method="telegram">Envoyer par Telegram</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
